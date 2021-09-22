@@ -340,11 +340,7 @@ proxy-groups:
     proxies:
       - DIRECT
 
-  - name: 🛑 隐私拦截
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT   
+
 
 
 # 分流规则订阅
@@ -363,13 +359,6 @@ rule-providers:
     behavior: classical
     path: ./RuleSet/China.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml
-    interval: 86400
-
-  AdvertisingTest:
-    type: http
-    behavior: classical
-    path: ./RuleSet/AdvertisingTest.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest.yaml
     interval: 86400
 
   Google:
@@ -540,7 +529,6 @@ rules:
   - RULE-SET,WhiteList,🎯 全球直连
   - RULE-SET,Download,🎯 全球直连
   - RULE-SET,Lan,🎯 全球直连
-  - RULE-SET,AdvertisingTest,🛑 隐私拦截
   - RULE-SET,Google,🔍️ 谷歌服务
   - RULE-SET,GoogleDrive,🔍️ 谷歌服务
   - RULE-SET,OneDrive,Ⓜ️ 微软云盘
